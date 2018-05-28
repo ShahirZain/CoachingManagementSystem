@@ -1,0 +1,9 @@
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.exe
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.pdb
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Form1.resources
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Properties.Resources.resources
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csproj.GenerateResource.Cache
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.exe
+C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.pdb
