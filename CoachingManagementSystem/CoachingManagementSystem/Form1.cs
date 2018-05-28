@@ -129,6 +129,25 @@ namespace CoachingManagementSystem
         }
 
         
+        //to add labels on click submit
+        static byte batchCount = 0;
+        public Label[] batchNames = new Label[100];
+        public int labelX = 10, labelY = 0;
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            batchNames[batchCount] = new Label();
+            batchNames[batchCount].Name = "batchName" + batchCount;
+            batchNames[batchCount].Location = new Point(labelX, labelY);
+            batchNames[batchCount].Font = new Font("Century Gothic", 9.75F);
+            batchNames[batchCount].Text = bunifuMetroTextbox1.Text;
+            this.bunifuGradientPanel7.Controls.Add(batchNames[batchCount]);
+            batchNames[batchCount].Click += (object s, EventArgs ev) =>
+            {
+                bunifuMetroTextbox1.Text = ((Label)s).Name + " has been clicked!";
+            };
+            labelY += 20;
+            batchCount++;
+        }
 
        
 
