@@ -66,6 +66,7 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel5.Show();
             this.bunifuGradientPanel6.Show();
             this.bunifuGradientPanel7.Show();
+            this.bunifuGradientPanel8.Hide();
             //TextBox and Submit Button
             this.bunifuMetroTextbox1.Hide();
             this.bunifuFlatButton1.Hide();
@@ -82,7 +83,17 @@ namespace CoachingManagementSystem
         //Trainer
         private void bunifuThinButton29_Click(object sender, EventArgs e)
         {
+            //Panels for trainer
+            this.bunifuGradientPanel4.Show();
+            this.bunifuGradientPanel5.Show();
+            this.bunifuGradientPanel6.Show();
+            this.bunifuGradientPanel7.Show();
+            this.bunifuGradientPanel8.Show();
 
+            //TB2 and TB3 and B214 on add trainer's Button
+            this.bunifuThinButton214.Hide();
+            this.bunifuMetroTextbox2.Hide();
+            this.bunifuMetroTextbox3.Hide();
         }
 
 
@@ -102,6 +113,19 @@ namespace CoachingManagementSystem
             //TextBox and Submit Button
             this.bunifuMetroTextbox1.Show();
             this.bunifuFlatButton1.Show();
+        }
+
+
+        //Add Button of Trainer
+        private void bunifuThinButton212_Click(object sender, EventArgs e)
+        {
+            //TB2 and TB3 and B214 on add trainer's Button
+            this.bunifuThinButton214.Show();
+            this.bunifuMetroTextbox2.Show();
+            this.bunifuMetroTextbox3.Show();
+            //ADD button and view button
+            this.bunifuThinButton212.Hide();
+            this.bunifuThinButton213.Hide();
         }
 
         
