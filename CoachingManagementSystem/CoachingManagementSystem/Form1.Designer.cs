@@ -55,6 +55,7 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -151,6 +152,7 @@
             this.bunifuCheckbox16 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label29 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.bunifuThinButton215 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -236,6 +238,7 @@
             // 
             // bunifuGradientPanel3
             // 
+            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel3.Controls.Add(this.bunifuThinButton210);
@@ -263,7 +266,7 @@
             this.bunifuThinButton210.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton210.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton210.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton210.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton210.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton210.BackgroundImage")));
             this.bunifuThinButton210.ButtonText = "Student";
             this.bunifuThinButton210.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -289,7 +292,7 @@
             this.bunifuThinButton29.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton29.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton29.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton29.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton29.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton29.BackgroundImage")));
             this.bunifuThinButton29.ButtonText = "Trainer";
             this.bunifuThinButton29.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -315,7 +318,7 @@
             this.bunifuThinButton28.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton28.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton28.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton28.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton28.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton28.BackgroundImage")));
             this.bunifuThinButton28.ButtonText = "Courses";
             this.bunifuThinButton28.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -341,7 +344,7 @@
             this.bunifuThinButton25.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton25.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
             this.bunifuThinButton25.ButtonText = "Batch";
             this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -367,7 +370,7 @@
             this.bunifuThinButton23.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton23.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
             this.bunifuThinButton23.ButtonText = "Payment";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -393,7 +396,7 @@
             this.bunifuThinButton22.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
             this.bunifuThinButton22.ButtonText = "Register";
             this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -419,7 +422,7 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.SystemColors.ControlLightLight;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Search";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -497,6 +500,7 @@
             this.bunifuGradientPanel4.Controls.Add(this.bunifuCheckbox16);
             this.bunifuGradientPanel4.Controls.Add(this.label29);
             this.bunifuGradientPanel4.Controls.Add(this.label25);
+            this.bunifuGradientPanel4.Controls.Add(this.bunifuThinButton215);
             this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
@@ -550,10 +554,10 @@
             this.bunifuGradientPanel5.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel5.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel5.Location = new System.Drawing.Point(0, 472);
             this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
             this.bunifuGradientPanel5.Quality = 10;
-            this.bunifuGradientPanel5.Size = new System.Drawing.Size(851, 554);
+            this.bunifuGradientPanel5.Size = new System.Drawing.Size(78, 82);
             this.bunifuGradientPanel5.TabIndex = 30;
             // 
             // bunifuGradientPanel6
@@ -598,7 +602,7 @@
             this.bunifuGradientPanel6.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel6.Name = "bunifuGradientPanel6";
             this.bunifuGradientPanel6.Quality = 10;
-            this.bunifuGradientPanel6.Size = new System.Drawing.Size(851, 554);
+            this.bunifuGradientPanel6.Size = new System.Drawing.Size(141, 141);
             this.bunifuGradientPanel6.TabIndex = 67;
             // 
             // bunifuGradientPanel7
@@ -609,14 +613,15 @@
             this.bunifuGradientPanel7.Controls.Add(this.bunifuFlatButton1);
             this.bunifuGradientPanel7.Controls.Add(this.bunifuMetroTextbox1);
             this.bunifuGradientPanel7.Controls.Add(this.bunifuThinButton24);
+            this.bunifuGradientPanel7.Controls.Add(this.bunifuSeparator3);
             this.bunifuGradientPanel7.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel7.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel7.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel7.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel7.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel7.Location = new System.Drawing.Point(0, 419);
             this.bunifuGradientPanel7.Name = "bunifuGradientPanel7";
             this.bunifuGradientPanel7.Quality = 10;
-            this.bunifuGradientPanel7.Size = new System.Drawing.Size(851, 554);
+            this.bunifuGradientPanel7.Size = new System.Drawing.Size(187, 135);
             this.bunifuGradientPanel7.TabIndex = 29;
             // 
             // bunifuGradientPanel8
@@ -635,7 +640,7 @@
             this.bunifuGradientPanel8.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel8.Name = "bunifuGradientPanel8";
             this.bunifuGradientPanel8.Quality = 10;
-            this.bunifuGradientPanel8.Size = new System.Drawing.Size(288, 554);
+            this.bunifuGradientPanel8.Size = new System.Drawing.Size(115, 148);
             this.bunifuGradientPanel8.TabIndex = 3;
             // 
             // bunifuMetroTextbox3
@@ -830,6 +835,19 @@
             this.bunifuThinButton24.TabIndex = 0;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator3.LineThickness = 34;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(120, 154);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Size = new System.Drawing.Size(639, 35);
+            this.bunifuSeparator3.TabIndex = 4;
+            this.bunifuSeparator3.Transparency = 255;
+            this.bunifuSeparator3.Vertical = false;
             // 
             // textBox13
             // 
@@ -1831,6 +1849,8 @@
             this.bunifuMaterialTextbox8.TabIndex = 7;
             this.bunifuMaterialTextbox8.Text = "Date of Birth";
             this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox8.Enter += new System.EventHandler(this.bunifuMaterialTextbox8_Enter);
+            this.bunifuMaterialTextbox8.Leave += new System.EventHandler(this.bunifuMaterialTextbox8_Leave);
             // 
             // bunifuMaterialTextbox7
             // 
@@ -1851,6 +1871,8 @@
             this.bunifuMaterialTextbox7.TabIndex = 6;
             this.bunifuMaterialTextbox7.Text = "Gender";
             this.bunifuMaterialTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox7.Enter += new System.EventHandler(this.bunifuMaterialTextbox7_Enter);
+            this.bunifuMaterialTextbox7.Leave += new System.EventHandler(this.bunifuMaterialTextbox7_Leave);
             // 
             // bunifuMaterialTextbox6
             // 
@@ -1871,6 +1893,8 @@
             this.bunifuMaterialTextbox6.TabIndex = 5;
             this.bunifuMaterialTextbox6.Text = "Email";
             this.bunifuMaterialTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox6.Enter += new System.EventHandler(this.bunifuMaterialTextbox6_Enter);
+            this.bunifuMaterialTextbox6.Leave += new System.EventHandler(this.bunifuMaterialTextbox6_Leave);
             // 
             // bunifuMaterialTextbox5
             // 
@@ -1891,6 +1915,8 @@
             this.bunifuMaterialTextbox5.TabIndex = 4;
             this.bunifuMaterialTextbox5.Text = "Mobile Number";
             this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox5.Enter += new System.EventHandler(this.bunifuMaterialTextbox5_Enter);
+            this.bunifuMaterialTextbox5.Leave += new System.EventHandler(this.bunifuMaterialTextbox5_Leave);
             // 
             // bunifuMaterialTextbox4
             // 
@@ -1911,6 +1937,8 @@
             this.bunifuMaterialTextbox4.TabIndex = 3;
             this.bunifuMaterialTextbox4.Text = "Religion";
             this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox4.Enter += new System.EventHandler(this.bunifuMaterialTextbox4_Enter);
+            this.bunifuMaterialTextbox4.Leave += new System.EventHandler(this.bunifuMaterialTextbox4_Leave);
             // 
             // bunifuMaterialTextbox3
             // 
@@ -1931,6 +1959,8 @@
             this.bunifuMaterialTextbox3.TabIndex = 2;
             this.bunifuMaterialTextbox3.Text = "Address";
             this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox3.Enter += new System.EventHandler(this.bunifuMaterialTextbox3_Enter);
+            this.bunifuMaterialTextbox3.Leave += new System.EventHandler(this.bunifuMaterialTextbox3_Leave);
             // 
             // bunifuMaterialTextbox2
             // 
@@ -1951,6 +1981,8 @@
             this.bunifuMaterialTextbox2.TabIndex = 1;
             this.bunifuMaterialTextbox2.Text = "Father Name";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox2.Enter += new System.EventHandler(this.bunifuMaterialTextbox2_Enter);
+            this.bunifuMaterialTextbox2.Leave += new System.EventHandler(this.bunifuMaterialTextbox2_Leave);
             // 
             // bunifuMaterialTextbox1
             // 
@@ -1971,6 +2003,8 @@
             this.bunifuMaterialTextbox1.TabIndex = 0;
             this.bunifuMaterialTextbox1.Text = "Name";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox1.Enter += new System.EventHandler(this.bunifuMaterialTextbox1_Enter);
+            this.bunifuMaterialTextbox1.Leave += new System.EventHandler(this.bunifuMaterialTextbox1_Leave);
             // 
             // label28
             // 
@@ -2029,6 +2063,31 @@
             this.label25.TabIndex = 68;
             this.label25.Text = "Class";
             // 
+            // bunifuThinButton215
+            // 
+            this.bunifuThinButton215.ActiveBorderThickness = 1;
+            this.bunifuThinButton215.ActiveCornerRadius = 20;
+            this.bunifuThinButton215.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton215.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton215.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton215.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton215.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton215.BackgroundImage")));
+            this.bunifuThinButton215.ButtonText = "SUBMIT";
+            this.bunifuThinButton215.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton215.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton215.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton215.IdleBorderThickness = 1;
+            this.bunifuThinButton215.IdleCornerRadius = 20;
+            this.bunifuThinButton215.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton215.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton215.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton215.Location = new System.Drawing.Point(446, 503);
+            this.bunifuThinButton215.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton215.Name = "bunifuThinButton215";
+            this.bunifuThinButton215.Size = new System.Drawing.Size(181, 41);
+            this.bunifuThinButton215.TabIndex = 73;
+            this.bunifuThinButton215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
@@ -2083,130 +2142,133 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton29;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton27;
-        private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
-        private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
-        private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
-        private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox6;
-        private System.Windows.Forms.Label label9;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox8;
-        private System.Windows.Forms.Label label15;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox9;
-        private System.Windows.Forms.Label label16;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox10;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox11;
-        private System.Windows.Forms.Label label19;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox12;
-        private System.Windows.Forms.Label label20;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox13;
-        private System.Windows.Forms.Label label21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton211;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox14;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox10;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox11;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox12;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox13;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox14;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox15;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox16;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label25;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox17;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox18;
-        private System.Windows.Forms.Label label28;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox15;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox16;
-        private System.Windows.Forms.Label label29;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel6;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel7;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel8;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton214;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton213;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton212;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton29;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
+        public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton27;
+        public System.Windows.Forms.Label label5;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
+        public System.Windows.Forms.Label label4;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
+        public System.Windows.Forms.Label label3;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label7;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
+        public System.Windows.Forms.Label label8;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox6;
+        public System.Windows.Forms.Label label9;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label10;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
+        public Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label14;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox8;
+        public System.Windows.Forms.Label label15;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox9;
+        public System.Windows.Forms.Label label16;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox10;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label label18;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox11;
+        public System.Windows.Forms.Label label19;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox12;
+        public System.Windows.Forms.Label label20;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox13;
+        public System.Windows.Forms.Label label21;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton211;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox14;
+        public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox9;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox10;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox11;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox12;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox13;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox14;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox15;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox16;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label25;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox17;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox18;
+        public System.Windows.Forms.Label label28;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox15;
+        public Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox16;
+        public System.Windows.Forms.Label label29;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel6;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        public Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
+        public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel7;
+        public Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        public Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
+        public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel8;
+        public Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        public Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton214;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton213;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton212;
+        public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton215;
+
 
     }
 }

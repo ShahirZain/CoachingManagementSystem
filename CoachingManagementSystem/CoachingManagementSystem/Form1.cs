@@ -6,20 +6,31 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CoachingManagementSystem
 {
     public partial class Form1 : Form
     {
+
+        public String textBoxtext;
+        supportingClass c;
+
+
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6MEQU96;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+
+
         //Constructor
         public Form1()
         {
             InitializeComponent();
+           
         }
 
         //Load
         private void Form1_Load(object sender, EventArgs e)
         {
+            c = new supportingClass(this);
             this.bunifuGradientPanel4.Hide();
         }
 
@@ -104,6 +115,135 @@ namespace CoachingManagementSystem
         }
 
 
+            //************************* Start*************************\\
+
+
+        /// <summary>
+        /// here we use only enter and leave event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void bunifuMaterialTextbox1_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox1.Text;
+            this.bunifuMaterialTextbox1.Text = "";
+        }
+
+        private void bunifuMaterialTextbox1_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox1.Text == "")
+            {
+                this.bunifuMaterialTextbox1.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox2_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox2.Text;
+            this.bunifuMaterialTextbox2.Text = "";
+        }
+
+        private void bunifuMaterialTextbox2_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox2.Text == "")
+            {
+                this.bunifuMaterialTextbox2.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox3_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox3.Text;
+            this.bunifuMaterialTextbox3.Text = "";
+        }
+
+        private void bunifuMaterialTextbox3_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox3.Text == "")
+            {
+                this.bunifuMaterialTextbox3.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox4_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox4.Text;
+            this.bunifuMaterialTextbox4.Text = "";
+        }
+
+        private void bunifuMaterialTextbox4_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox4.Text == "")
+            {
+                this.bunifuMaterialTextbox4.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox5_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox5.Text;
+            this.bunifuMaterialTextbox5.Text = "";
+        }
+
+        private void bunifuMaterialTextbox5_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox5.Text == "")
+            {
+                this.bunifuMaterialTextbox5.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox6_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox6.Text;
+            this.bunifuMaterialTextbox6.Text = "";
+        }
+
+        private void bunifuMaterialTextbox6_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox6.Text == "")
+            {
+                this.bunifuMaterialTextbox6.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox7_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox7.Text;
+            this.bunifuMaterialTextbox7.Text = "";
+        }
+
+        private void bunifuMaterialTextbox7_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox7.Text == "")
+            {
+                this.bunifuMaterialTextbox7.Text = textBoxtext;
+            }
+        }
+
+        private void bunifuMaterialTextbox8_Enter(object sender, EventArgs e)
+        {
+            textBoxtext = this.bunifuMaterialTextbox8.Text;
+            this.bunifuMaterialTextbox8.Text = "";
+        }
+
+        private void bunifuMaterialTextbox8_Leave(object sender, EventArgs e)
+        {
+            if (this.bunifuMaterialTextbox8.Text == "")
+            {
+                this.bunifuMaterialTextbox8.Text = textBoxtext;
+            }
+        }
+
+
+//************************   END ENTER AND LEAVE   ***************************\\
+       
+
+
+
+
+
         //Create Batch Button in Batch tab
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
@@ -128,11 +268,11 @@ namespace CoachingManagementSystem
             this.bunifuThinButton213.Hide();
         }
 
-        
+
         //to add labels on click submit
         static byte batchCount = 0;
         public Label[] batchNames = new Label[100];
-        public int labelX = 10, labelY = 0;
+        public int labelX = 100, labelY = 200;
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             batchNames[batchCount] = new Label();
@@ -149,7 +289,9 @@ namespace CoachingManagementSystem
             batchCount++;
         }
 
-       
+
+
+     
 
 
        

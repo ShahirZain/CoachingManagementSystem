@@ -7,3 +7,11 @@ C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\C
 C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csproj.GenerateResource.Cache
 C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.exe
 C:\Users\Shahir Zain\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.pdb
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.exe
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.pdb
+D:\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.exe
+D:\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.pdb
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csprojResolveAssemblyReference.cache
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Form1.resources
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Properties.Resources.resources
+D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csproj.GenerateResource.Cache
