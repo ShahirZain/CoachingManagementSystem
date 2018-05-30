@@ -222,24 +222,21 @@ namespace CoachingManagementSystem
             }
         }
 
-        private void bunifuMaterialTextbox8_Enter(object sender, EventArgs e)
-        {
-            textBoxtext = this.bunifuMaterialTextbox8.Text;
-            this.bunifuMaterialTextbox8.Text = "";
-        }
-
-        private void bunifuMaterialTextbox8_Leave(object sender, EventArgs e)
-        {
-            if (this.bunifuMaterialTextbox8.Text == "")
-            {
-                this.bunifuMaterialTextbox8.Text = textBoxtext;
-            }
-        }
+      
 
 
 //************************   END ENTER AND LEAVE   ***************************\\
-       
 
+
+
+
+
+
+        //Browse Image
+        private void bunifuThinButton27_Click(object sender, EventArgs e)
+        {
+            c.browseImg();
+        }
 
 
 
@@ -288,6 +285,15 @@ namespace CoachingManagementSystem
             labelY += 20;
             batchCount++;
         }
+
+        private void bunifuThinButton215_Click(object sender, EventArgs e)
+        {
+            c.checksValues();
+            c.imgToBinary();
+            c.insertIntoForm();
+        }
+
+       
 
 
 

@@ -139,7 +139,6 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox7 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox6 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -155,6 +154,7 @@
             this.bunifuThinButton215 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -465,6 +465,7 @@
             // 
             this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
             this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.Controls.Add(this.bunifuDatepicker1);
             this.bunifuGradientPanel4.Controls.Add(this.bunifuGradientPanel5);
             this.bunifuGradientPanel4.Controls.Add(this.label11);
             this.bunifuGradientPanel4.Controls.Add(this.label10);
@@ -487,7 +488,6 @@
             this.bunifuGradientPanel4.Controls.Add(this.bunifuSeparator1);
             this.bunifuGradientPanel4.Controls.Add(this.label1);
             this.bunifuGradientPanel4.Controls.Add(this.pictureBox2);
-            this.bunifuGradientPanel4.Controls.Add(this.bunifuMaterialTextbox8);
             this.bunifuGradientPanel4.Controls.Add(this.bunifuMaterialTextbox7);
             this.bunifuGradientPanel4.Controls.Add(this.bunifuMaterialTextbox6);
             this.bunifuGradientPanel4.Controls.Add(this.bunifuMaterialTextbox5);
@@ -840,7 +840,7 @@
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator3.LineThickness = 34;
+            this.bunifuSeparator3.LineThickness = 89;
             this.bunifuSeparator3.Location = new System.Drawing.Point(120, 154);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
@@ -1786,6 +1786,7 @@
             this.bunifuThinButton27.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton27.TabIndex = 13;
             this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton27.Click += new System.EventHandler(this.bunifuThinButton27_Click);
             // 
             // bunifuCheckbox1
             // 
@@ -1827,30 +1828,9 @@
             this.pictureBox2.Location = new System.Drawing.Point(672, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(136, 141);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
-            // bunifuMaterialTextbox8
-            // 
-            this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox8.HintText = "";
-            this.bunifuMaterialTextbox8.isPassword = false;
-            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox8.LineThickness = 3;
-            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(24, 457);
-            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
-            this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(615, 33);
-            this.bunifuMaterialTextbox8.TabIndex = 7;
-            this.bunifuMaterialTextbox8.Text = "Date of Birth";
-            this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox8.Enter += new System.EventHandler(this.bunifuMaterialTextbox8_Enter);
-            this.bunifuMaterialTextbox8.Leave += new System.EventHandler(this.bunifuMaterialTextbox8_Leave);
             // 
             // bunifuMaterialTextbox7
             // 
@@ -2087,6 +2067,7 @@
             this.bunifuThinButton215.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton215.TabIndex = 73;
             this.bunifuThinButton215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton215.Click += new System.EventHandler(this.bunifuThinButton215_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -2110,6 +2091,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(28, 457);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(611, 36);
+            this.bunifuDatepicker1.TabIndex = 74;
+            this.bunifuDatepicker1.Value = new System.DateTime(2018, 5, 31, 4, 22, 26, 989);
             // 
             // Form1
             // 
@@ -2158,7 +2152,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         public System.Windows.Forms.PictureBox pictureBox1;
         public Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
-        public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
         public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox7;
         public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox6;
         public Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
@@ -2268,6 +2261,7 @@
         public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton212;
         public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton215;
+        public Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
 
 
     }
