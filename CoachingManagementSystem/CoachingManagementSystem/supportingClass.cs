@@ -54,6 +54,9 @@ namespace CoachingManagementSystem
                 xiicheck = "yes";       
         }
 
+
+        //<<><><><><IMAGE BROWSE FROM FILE><<><<><>>\\
+
         public void browseImg() {
             try {
                 OpenFileDialog dlg = new OpenFileDialog();
@@ -70,6 +73,7 @@ namespace CoachingManagementSystem
             }
         }
 
+        //<<><><><>< IMAGE TO BINARY NUMBER ><<><<><>>\\
 
         public void imgToBinary() {
             try {
@@ -84,34 +88,72 @@ namespace CoachingManagementSystem
         }
 
 
+        //<<><><><><FORM NUMBER><<><<><>>\\
+        public void countRow()
+        {
+
+            int c = 0;
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(formNO) FROM ADMSN", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    c = Convert.ToInt32(dr[0]);
+                    c++;
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+            f1.label11.Text = c.ToString();
+
+        }
+
+
+
         // ******* Insert Into Form ******\\
 
         public void insertIntoForm() {
 
             conn.Open();
-            SqlCommand cmd = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img)",conn);
-            cmd.Parameters.AddWithValue("@sname",f1.bunifuMetroTextbox1.Text);
-            cmd.Parameters.AddWithValue("@fname", f1.bunifuMetroTextbox2.Text);
-            cmd.Parameters.AddWithValue("@address", f1.bunifuMetroTextbox3.Text);
-            cmd.Parameters.AddWithValue("@religion", f1.bunifuMaterialTextbox4.Text);
-            cmd.Parameters.AddWithValue("@mblNo", f1.bunifuMaterialTextbox5.Text);
-            cmd.Parameters.AddWithValue("@email", f1.bunifuMaterialTextbox6.Text);
-            cmd.Parameters.AddWithValue("@sex", f1.bunifuMaterialTextbox7.Text);
-            cmd.Parameters.AddWithValue("@DOB", f1.bunifuDatepicker1.Value);
-            cmd.Parameters.AddWithValue("@phy", phycheck);
-            cmd.Parameters.AddWithValue("@chem", chemcheck);
-            cmd.Parameters.AddWithValue("@math", mathcheck);
-            cmd.Parameters.AddWithValue("@cs", cscheck);
-            cmd.Parameters.AddWithValue("@phylab", phylabcheck);
-            cmd.Parameters.AddWithValue("@chemlab", chemlabcheck);
-            cmd.Parameters.AddWithValue("@cslab", cslabcheck);
-            cmd.Parameters.AddWithValue("@xi", xicheck);
-            cmd.Parameters.AddWithValue("@xii", xiicheck);
-            cmd.Parameters.AddWithValue("@img", img);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img,formNo) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img,@formNo)", conn);
+                cmd.Parameters.AddWithValue("@sname", f1.bunifuMetroTextbox1.Text);
+                cmd.Parameters.AddWithValue("@fname", f1.bunifuMetroTextbox2.Text);
+                cmd.Parameters.AddWithValue("@address", f1.bunifuMetroTextbox3.Text);
+                cmd.Parameters.AddWithValue("@religion", f1.bunifuMaterialTextbox4.Text);
+                cmd.Parameters.AddWithValue("@mblNo", f1.bunifuMaterialTextbox5.Text);
+                cmd.Parameters.AddWithValue("@email", f1.bunifuMaterialTextbox6.Text);
+                cmd.Parameters.AddWithValue("@sex", f1.bunifuMaterialTextbox7.Text);
+                cmd.Parameters.AddWithValue("@DOB", f1.bunifuDatepicker1.Value);
+                cmd.Parameters.AddWithValue("@phy", phycheck);
+                cmd.Parameters.AddWithValue("@chem", chemcheck);
+                cmd.Parameters.AddWithValue("@math", mathcheck);
+                cmd.Parameters.AddWithValue("@cs", cscheck);
+                cmd.Parameters.AddWithValue("@phylab", phylabcheck);
+                cmd.Parameters.AddWithValue("@chemlab", chemlabcheck);
+                cmd.Parameters.AddWithValue("@cslab", cslabcheck);
+                cmd.Parameters.AddWithValue("@xi", xicheck);
+                cmd.Parameters.AddWithValue("@xii", xiicheck);
+                cmd.Parameters.AddWithValue("@img", img);
+                cmd.Parameters.AddWithValue("@formNo", Convert.ToInt32(f1.label11.Text));
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e) {
+                MessageBox.Show(e.ToString());
+            }
             conn.Close();
-            MessageBox.Show("abc");
+            MessageBox.Show("Form submitted");
         }
-        
+
+    
+
     }
 }

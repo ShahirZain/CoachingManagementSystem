@@ -55,6 +55,7 @@ namespace CoachingManagementSystem
         {
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Hide();
+            c.countRow(); //Form nnumber
         }
 
         
@@ -228,7 +229,7 @@ namespace CoachingManagementSystem
 //************************   END ENTER AND LEAVE   ***************************\\
 
 
-
+//************************   FORM SUBMISSION   ***************************\\
 
 
 
@@ -238,8 +239,18 @@ namespace CoachingManagementSystem
             c.browseImg();
         }
 
+        //Form submit button
+
+        private void bunifuThinButton215_Click(object sender, EventArgs e)
+        {
+            c.checksValues();
+            c.imgToBinary();
+            c.insertIntoForm();
+        }
 
 
+
+//************************   END FORM SUBMISSION   ***************************\\
 
         //Create Batch Button in Batch tab
         private void bunifuThinButton24_Click(object sender, EventArgs e)
@@ -286,14 +297,7 @@ namespace CoachingManagementSystem
             batchCount++;
         }
 
-        private void bunifuThinButton215_Click(object sender, EventArgs e)
-        {
-            c.checksValues();
-            c.imgToBinary();
-            c.insertIntoForm();
-        }
-
-       
+      
 
 
 
@@ -305,27 +309,6 @@ namespace CoachingManagementSystem
        
 
         
-        /*
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-            this.bunifuGradientPanel4.Show();
-        }
-
-        private void bunifuThinButton27_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog dlg = new OpenFileDialog();
-                dlg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-                if (dlg.ShowDialog() == DialogResult.OK) {
-                    pictureBox1.ImageLocation = dlg.FileName;
-                }
-            }
-            catch (Exception ) {
-                MessageBox.Show("Wrong selection"+e);
-            }
-        }
-         
-         */
+     
     }
 }

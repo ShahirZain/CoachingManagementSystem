@@ -43,6 +43,7 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel6 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel7 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -154,7 +155,6 @@
             this.bunifuThinButton215 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -205,7 +205,7 @@
             this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.Transparent;
             this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton26.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
             this.bunifuThinButton26.ButtonText = "Exit";
             this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -510,6 +510,19 @@
             this.bunifuGradientPanel4.Quality = 10;
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(851, 554);
             this.bunifuGradientPanel4.TabIndex = 5;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(28, 457);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(611, 36);
+            this.bunifuDatepicker1.TabIndex = 74;
+            this.bunifuDatepicker1.Value = new System.DateTime(2018, 5, 31, 4, 22, 26, 989);
             // 
             // bunifuGradientPanel5
             // 
@@ -840,7 +853,7 @@
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator3.LineThickness = 89;
+            this.bunifuSeparator3.LineThickness = 144;
             this.bunifuSeparator3.Location = new System.Drawing.Point(120, 154);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
@@ -1769,7 +1782,7 @@
             this.bunifuThinButton27.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton27.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton27.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton27.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton27.BackColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton27.BackgroundImage")));
             this.bunifuThinButton27.ButtonText = "Upload Image";
             this.bunifuThinButton27.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -2091,19 +2104,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkGray;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(28, 457);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(611, 36);
-            this.bunifuDatepicker1.TabIndex = 74;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 5, 31, 4, 22, 26, 989);
             // 
             // Form1
             // 
