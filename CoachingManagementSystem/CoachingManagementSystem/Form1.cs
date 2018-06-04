@@ -47,6 +47,7 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Show();
             this.bunifuGradientPanel6.Hide();
+            c.searchCombo();
         }
 
 
@@ -55,6 +56,7 @@ namespace CoachingManagementSystem
         {
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Hide();
+            this.bunifuGradientPanel6.Hide();
             c.countRow(); //Form nnumber
         }
 
@@ -62,7 +64,7 @@ namespace CoachingManagementSystem
         //PAyment
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-
+            c.searchCombo2();
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Show();
             this.bunifuGradientPanel6.Show();
@@ -74,6 +76,8 @@ namespace CoachingManagementSystem
         //Batch
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
+            this.bunifuThinButton24.Show();
+            this.bunifuThinButton216.Show();
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Show();
             this.bunifuGradientPanel6.Show();
@@ -252,16 +256,35 @@ namespace CoachingManagementSystem
 
 //************************   END FORM SUBMISSION   ***************************\\
 
+
+        //Search
+        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+        {
+            c.selectedCombo();
+        }
+        //payment
+        private void bunifuThinButton211_Click(object sender, EventArgs e)
+        {
+            c.submit();
+        }
+
+//************************   BATCH WORK START   ***************************\\
+
+
         //Create Batch Button in Batch tab
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
             //Hide Create batch Button
             this.bunifuThinButton24.Hide();
+            this.bunifuThinButton216.Hide();
+
 
             //TextBox and Submit Button
             this.bunifuMetroTextbox1.Show();
             this.bunifuFlatButton1.Show();
         }
+
+
 
 
         //Add Button of Trainer
@@ -295,11 +318,11 @@ namespace CoachingManagementSystem
             };
             labelY += 20;
             batchCount++;
+            c.creatTable();
+
         }
 
-      
-
-
+//************************   BATCH WORK END   ***************************\\
 
      
 

@@ -12,8 +12,9 @@ using System.IO;
 namespace CoachingManagementSystem
 {
     class supportingClass
-    {            
-        
+    {
+        SqlCommand cmd;
+        int flag = 1;
         Form1 f1;
         String phycheck="", chemcheck="", mathcheck="", cscheck="", phylabcheck="", chemlabcheck="", cslabcheck="", xicheck="", xiicheck="";
         String imgLoc = "";
@@ -26,6 +27,7 @@ namespace CoachingManagementSystem
             f1 = ff;
         }
 
+                                     //<><><><><><><><><><><><><><><><Register Work START><><><><><><><><><><><><><><><><><><>\\
 
                                                             // ******* FORM SUBMISSION ******\\
 
@@ -124,7 +126,8 @@ namespace CoachingManagementSystem
             conn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img,formNo) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img,@formNo)", conn);
+                cmd  = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img,formNo) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img,@formNo)", conn);
+                SqlCommand cmd1 = new SqlCommand("insert into fee(formNo) values(@formNo)", conn);
                 cmd.Parameters.AddWithValue("@sname", f1.bunifuMetroTextbox1.Text);
                 cmd.Parameters.AddWithValue("@fname", f1.bunifuMetroTextbox2.Text);
                 cmd.Parameters.AddWithValue("@address", f1.bunifuMetroTextbox3.Text);
@@ -144,7 +147,9 @@ namespace CoachingManagementSystem
                 cmd.Parameters.AddWithValue("@xii", xiicheck);
                 cmd.Parameters.AddWithValue("@img", img);
                 cmd.Parameters.AddWithValue("@formNo", Convert.ToInt32(f1.label11.Text));
+                cmd1.Parameters.AddWithValue("@formNo", Convert.ToInt32(f1.label11.Text));
                 cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
             }
             catch (Exception e) {
                 MessageBox.Show(e.ToString());
@@ -153,7 +158,146 @@ namespace CoachingManagementSystem
             MessageBox.Show("Form submitted");
         }
 
-    
+                              //<><><><><><><><><><><><><><><><Register Work END><><><><><><><><><><><><><><><><><><>\\
+
+                             //<><><><><><><><><><><><><><><><><Search Work START><><><><><><><><><><><><><><><><><><>\\
+
+        // ******* Populate Combo 1  ******\\
+
+        public void searchCombo() {
+            conn.Open();
+            try{
+                cmd = new SqlCommand("Select * from ADMSN",conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read()) {
+                    f1.bunifuDropdown1.AddItem(dr["formNo"].ToString());
+                }
+
+            }
+            catch(Exception e){
+            MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
+
+        // ******* selectedIndex Combo ******\\
+
+        public void selectedCombo()
+        {
+            String s;
+            conn.Open();
+           
+                cmd = new SqlCommand("Select * from ADMSN where formNo='"+f1.bunifuDropdown1.selectedValue+"'", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    f1.bunifuMaterialTextbox16.Text = dr["sname"].ToString();
+                    f1.bunifuMaterialTextbox15.Text = dr["fname"].ToString();
+                    f1.bunifuMaterialTextbox14.Text = dr["address"].ToString();
+                    f1.bunifuMaterialTextbox13.Text = dr["religion"].ToString();
+                    f1.bunifuMaterialTextbox12.Text = dr["mblNo"].ToString();
+                    f1.bunifuMaterialTextbox11.Text = dr["email"].ToString();
+                    f1.bunifuMaterialTextbox10.Text = dr["sex"].ToString();
+                    if (dr["math"].ToString() == "yes       ")
+                        f1.bunifuCheckbox14.Checked = true;
+                    if (dr["phy"].ToString() == "yes       ")
+                        f1.bunifuCheckbox13.Checked = true;
+                    if (dr["chem"].ToString() == "yes       ")
+                        f1.bunifuCheckbox12.Checked = true;
+                    if (dr["cs"].ToString() == "yes       ")
+                        f1.bunifuCheckbox11.Checked = true;
+                    if (dr["phylab"].ToString() == "yes       ")
+                        f1.bunifuCheckbox10.Checked = true;
+                    if (dr["chemlab"].ToString() == "yes       ")
+                        f1.bunifuCheckbox9.Checked = true;
+                    if (dr["cslab"].ToString() == "yes       ")
+                        f1.bunifuCheckbox8.Checked = true;
+                    if (dr["xi"].ToString() == "yes       ")
+                        f1.bunifuCheckbox18.Checked = true;
+                    if (dr["xii"].ToString() == "yes       ")
+                        f1.bunifuCheckbox17.Checked = true;
+                    }
+                byte []img = ((byte[])dr["img"]);
+                MemoryStream ms = new MemoryStream(img);
+                f1.pictureBox3.Image = Image.FromStream(ms);
+                
+            conn.Close();
+        }
+
+                             //<><><><><><><><><><><><><><><><><Search Work END><><><><><><><><><><><><><><><><><><>\\
+
+                            //<><><><><><><><><><><><><><><><><Payment Work START><><><><><><><><><><><><><><><><><><>\\
+
+        public void searchCombo2()
+        {
+            conn.Open();
+            try
+            {
+                cmd = new SqlCommand("Select * from fee", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    f1.bunifuDropdown2.AddItem(dr["formNo"].ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
+
+
+        // this submit function is called when submit button is clicked on payment table
+        public void submit()
+        {
+            conn.Open();
+            try
+            {
+                if (flag == 1)
+                {
+                    cmd = new SqlCommand("update  fee SET Admission=@Admission,jan=@jan,feb=@feb,march=@march,april=@april,may=@may,jun=@jun,july=@july,aug=@aug,sept=@sept,oct=@oct,nov=@nov,dec=@dec where formNo='" + f1.bunifuDropdown2.selectedValue + "'", conn);
+                    cmd.Parameters.AddWithValue("@Admission", f1.textBox1.Text);
+                    cmd.Parameters.AddWithValue("@jan", f1.textBox2.Text);
+                    cmd.Parameters.AddWithValue("@feb", f1.textBox3.Text);
+                    cmd.Parameters.AddWithValue("@march", f1.textBox4.Text);
+                    cmd.Parameters.AddWithValue("@april", f1.textBox5.Text);
+                    cmd.Parameters.AddWithValue("@may", f1.textBox6.Text);
+                    cmd.Parameters.AddWithValue("@jun", f1.textBox7.Text);
+                    cmd.Parameters.AddWithValue("@july", f1.textBox8.Text);
+                    cmd.Parameters.AddWithValue("@aug", f1.textBox9.Text);
+                    cmd.Parameters.AddWithValue("@sept", f1.textBox10.Text);
+                    cmd.Parameters.AddWithValue("@oct", f1.textBox11.Text);
+                    cmd.Parameters.AddWithValue("@nov", f1.textBox12.Text);
+                    cmd.Parameters.AddWithValue("@dec", f1.textBox13.Text);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
+
+                           //<><><><><><><><><><><><><><><><><Payment Work END><><><><><><><><><><><><><><><><><><>\\
+
+                          //<><><><><><><><><><><><><><><><><><BATCH Work START><><><><><><><><><><><><><><><><><><>\\
+        public void creatTable() {
+            
+            conn.Open();
+            try
+            {
+                cmd = new SqlCommand("CREATE TABLE "+f1.bunifuMetroTextbox1.Text.ToString()+"   (fname varchar(30), year varchar(30)) ", conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
 
     }
 }
