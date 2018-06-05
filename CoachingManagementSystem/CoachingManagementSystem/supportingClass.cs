@@ -128,9 +128,9 @@ namespace CoachingManagementSystem
             {
                 cmd  = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img,formNo) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img,@formNo)", conn);
                 SqlCommand cmd1 = new SqlCommand("insert into fee(formNo) values(@formNo)", conn);
-                cmd.Parameters.AddWithValue("@sname", f1.bunifuMetroTextbox1.Text);
-                cmd.Parameters.AddWithValue("@fname", f1.bunifuMetroTextbox2.Text);
-                cmd.Parameters.AddWithValue("@address", f1.bunifuMetroTextbox3.Text);
+                cmd.Parameters.AddWithValue("@sname", f1.bunifuMaterialTextbox1.Text);
+                cmd.Parameters.AddWithValue("@fname", f1.bunifuMaterialTextbox2.Text);
+                cmd.Parameters.AddWithValue("@address", f1.bunifuMaterialTextbox3.Text);
                 cmd.Parameters.AddWithValue("@religion", f1.bunifuMaterialTextbox4.Text);
                 cmd.Parameters.AddWithValue("@mblNo", f1.bunifuMaterialTextbox5.Text);
                 cmd.Parameters.AddWithValue("@email", f1.bunifuMaterialTextbox6.Text);
@@ -298,6 +298,128 @@ namespace CoachingManagementSystem
             }
             conn.Close();
         }
+                         //<><><><><><><><><><><><><><><><><><BATCH Work END><><><><><><><><><><><><><><><><><><>\\
 
+                       //<><><><><><><><><><><><><><><><><><Trainer Work START><><><><><><><><><><><><><><><><><><>\\
+        public void addTeacher() {
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("insert into trainer(subject,tname) values(@subject,@tname)", conn);
+                cmd.Parameters.AddWithValue("@subject", f1.bunifuMetroTextbox3.Text);
+                cmd.Parameters.AddWithValue("@tname", f1.bunifuMetroTextbox2.Text);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+            MessageBox.Show("Data submitted");
+        }
+        public void dataview() {
+            try {
+                conn.Open();
+                cmd = new SqlCommand("select * from trainer",conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.Girdview.DataSource = dt;
+                
+                
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+                  //<><><><><><><><><><><><><><><><><><Trainer Work END><><><><><><><><><><><><><><><><><><>\\
+
+                 //<><><><><><><><><><><><><><><><><><COURSE Work START><><><><><><><><><><><><><><><><><><>\\
+
+
+
+        public void addCourse()
+        {
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("insert into course(subject,COURSE_LEVEL) values(@subject,@COURSE_LEVEL)", conn);
+                cmd.Parameters.AddWithValue("@SUBJECT", f1.bunifuMetroTextbox5.Text);
+                cmd.Parameters.AddWithValue("@COURSE_LEVEL", f1.bunifuMetroTextbox4.Text);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+            MessageBox.Show("Data submitted");
+        }
+
+        //COurse view
+        public void courseDataView()
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select * from course", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.GirdView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+                        //<><><><><><><><><><><><><><><><><><COURSE Work END><><><><><><><><><><><><><><><><><><>\\
+
+                       //<><><><><><><><><><><><><><><><><><STUDENT Work START><><><><><><><><><><><><><><><><><><>\\
+
+        public void xi() {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select sname,fname,mblNo from ADMSN where xi='yes'", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.GirdView2.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+
+        public void xii()
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select sname as'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO.' from ADMSN where xii='yes'", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.GirdView2.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+
+                     //<><><><><><><><><><><><><><><><><><COURSE Work END><><><><><><><><><><><><><><><><><><>\\
     }
 }

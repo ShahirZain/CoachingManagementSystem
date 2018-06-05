@@ -93,6 +93,24 @@ namespace CoachingManagementSystem
         private void bunifuThinButton28_Click(object sender, EventArgs e)
         {
 
+
+            //Panels for Course
+            this.bunifuGradientPanel4.Show();
+            this.bunifuGradientPanel5.Show();
+            this.bunifuGradientPanel6.Show();
+            this.bunifuGradientPanel7.Show();
+            this.bunifuGradientPanel8.Show();
+            this.bunifuThinButton212.Show();
+            this.bunifuThinButton213.Show();
+            this.CoursePanel.Show();
+            this.bunifuThinButton218.Show();
+            this.bunifuThinButton219.Show();
+            this.GirdView1.Hide();
+
+            //hide control
+            this.bunifuMetroTextbox4.Hide();
+            this.bunifuMetroTextbox5.Hide();
+            this.bunifuThinButton217.Hide();
         }
 
 
@@ -105,6 +123,9 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel6.Show();
             this.bunifuGradientPanel7.Show();
             this.bunifuGradientPanel8.Show();
+            this.bunifuThinButton212.Show();
+            this.bunifuThinButton213.Show();
+            this.Girdview.Hide();
 
             //TB2 and TB3 and B214 on add trainer's Button
             this.bunifuThinButton214.Hide();
@@ -116,7 +137,14 @@ namespace CoachingManagementSystem
         //Student
         private void bunifuThinButton210_Click(object sender, EventArgs e)
         {
-
+            this.bunifuGradientPanel4.Show();
+            this.bunifuGradientPanel5.Show();
+            this.bunifuGradientPanel6.Show();
+            this.bunifuGradientPanel7.Show();
+            this.bunifuGradientPanel8.Show();
+            this.CoursePanel.Show();
+            this.bunifuGradientPanel9.Show();
+            this.GirdView2.Hide();
         }
 
 
@@ -321,8 +349,60 @@ namespace CoachingManagementSystem
             c.creatTable();
 
         }
+        //************************   BATCH WORK END   ***************************\\
+        private void bunifuThinButton214_Click(object sender, EventArgs e)
+        {
+            c.addTeacher();
+        }
 
-//************************   BATCH WORK END   ***************************\\
+        private void bunifuThinButton213_Click(object sender, EventArgs e)
+        {
+            this.Girdview.Show();
+            c.dataview();
+        }
+
+        private void bunifuThinButton219_Click(object sender, EventArgs e)
+        {
+            this.bunifuMetroTextbox4.Show();
+            this.bunifuMetroTextbox5.Show();
+            this.bunifuThinButton217.Show();
+            this.bunifuThinButton218.Hide();
+            this.bunifuThinButton219.Hide();
+        }
+
+        private void bunifuThinButton218_Click(object sender, EventArgs e)
+        {
+            this.bunifuMetroTextbox4.Hide();
+            this.bunifuMetroTextbox5.Hide();
+            this.bunifuThinButton217.Hide();
+            this.bunifuThinButton219.Hide();
+            this.GirdView1.Show();
+            c.courseDataView();
+        }
+
+        private void bunifuThinButton217_Click(object sender, EventArgs e)
+        {
+            c.addCourse();
+        }
+
+        private void bunifuThinButton221_Click(object sender, EventArgs e)
+        {
+            this.bunifuThinButton220.Hide();
+            this.bunifuThinButton221.Hide();
+            this.GirdView2.Show();
+            c.xii();
+            
+        }
+
+        private void bunifuThinButton220_Click(object sender, EventArgs e)
+        {
+            this.bunifuThinButton221.Hide();
+            this.bunifuThinButton220.Hide();
+            this.GirdView2.Show();
+            c.xi();
+        }
+
+
 
      
 
