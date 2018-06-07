@@ -13,6 +13,7 @@ namespace CoachingManagementSystem
 {
     class supportingClass
     {
+     public   int Studentflag0;
         SqlCommand cmd;
         int flag = 1;
         Form1 f1;
@@ -406,7 +407,7 @@ namespace CoachingManagementSystem
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("select sname as'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO.' from ADMSN where xii='yes'", conn);
+                cmd = new SqlCommand("select formNo as 'FORM NO.',sname as'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO.' from ADMSN where xii='yes'", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
@@ -419,7 +420,43 @@ namespace CoachingManagementSystem
             }
         }
 
+        public void search() { 
+        if(Studentflag0==1){
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select formNo as 'FORM NO.',sname as'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO.' from ADMSN where xi='yes' and sname like '%" + f1.textBox14.Text + "%' ", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.GirdView2.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        if (Studentflag0 == 2)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select formNo as 'FORM NO.',sname as'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO.' from ADMSN where xii='yes' and sname like '%"+f1.textBox14.Text+"%' ", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                f1.GirdView2.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        }
+            
 
-                     //<><><><><><><><><><><><><><><><><><COURSE Work END><><><><><><><><><><><><><><><><><><>\\
+                     //<><><><><><><><><><><><><><><><><><STUDENT Work END><><><><><><><><><><><><><><><><><><>\\
     }
 }

@@ -100,6 +100,7 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel6.Show();
             this.bunifuGradientPanel7.Show();
             this.bunifuGradientPanel8.Show();
+            this.bunifuGradientPanel9.Hide();
             this.bunifuThinButton212.Show();
             this.bunifuThinButton213.Show();
             this.CoursePanel.Show();
@@ -123,8 +124,11 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel6.Show();
             this.bunifuGradientPanel7.Show();
             this.bunifuGradientPanel8.Show();
+            this.CoursePanel.Hide();
+            this.bunifuGradientPanel9.Hide();
             this.bunifuThinButton212.Show();
             this.bunifuThinButton213.Show();
+
             this.Girdview.Hide();
 
             //TB2 and TB3 and B214 on add trainer's Button
@@ -145,6 +149,10 @@ namespace CoachingManagementSystem
             this.CoursePanel.Show();
             this.bunifuGradientPanel9.Show();
             this.GirdView2.Hide();
+            this.bunifuThinButton221.Show();
+            this.bunifuThinButton220.Show();
+            this.button1.Hide();
+            this.textBox14.Hide();
         }
 
 
@@ -391,7 +399,9 @@ namespace CoachingManagementSystem
             this.bunifuThinButton221.Hide();
             this.GirdView2.Show();
             c.xii();
-            
+            c.Studentflag0 = 2;
+            this.button1.Show();
+            this.textBox14.Show();
         }
 
         private void bunifuThinButton220_Click(object sender, EventArgs e)
@@ -400,6 +410,14 @@ namespace CoachingManagementSystem
             this.bunifuThinButton220.Hide();
             this.GirdView2.Show();
             c.xi();
+            c.Studentflag0 = 1;
+            this.button1.Show();
+            this.textBox14.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            c.search();
         }
 
 
