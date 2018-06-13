@@ -15,3 +15,11 @@ D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManag
 D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Form1.resources
 D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Properties.Resources.resources
 D:\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csproj.GenerateResource.Cache
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.exe
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.pdb
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.exe
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\bin\Debug\CoachingManagementSystem.pdb
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Form1.resources
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.Properties.Resources.resources
+C:\Users\UMAR COMPUTER\Desktop\CoachingManagementSystem\CoachingManagementSystem\CoachingManagementSystem\obj\x86\Debug\CoachingManagementSystem.csproj.GenerateResource.Cache

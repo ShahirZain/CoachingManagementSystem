@@ -22,7 +22,7 @@ namespace CoachingManagementSystem
         byte[] img = null;
 
                                                             // ******* Connection from SQL******\\
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6MEQU96;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
 
         public supportingClass(Form1 ff) {
             f1 = ff;
@@ -166,12 +166,13 @@ namespace CoachingManagementSystem
         // ******* Populate Combo 1  ******\\
 
         public void searchCombo() {
+            f1.comboBox1.Items.Clear();
             conn.Open();
             try{
                 cmd = new SqlCommand("Select * from ADMSN",conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read()) {
-                    f1.bunifuDropdown1.AddItem(dr["formNo"].ToString());
+                    f1.comboBox1.Items.Add(dr["formNo"].ToString());
                 }
 
             }
@@ -185,11 +186,13 @@ namespace CoachingManagementSystem
 
         public void selectedCombo()
         {
-            String s;
+            
             conn.Open();
-           
-                cmd = new SqlCommand("Select * from ADMSN where formNo='"+f1.bunifuDropdown1.selectedValue+"'", conn);
+
+            
+                cmd = new SqlCommand("Select * from ADMSN where formNo='"+f1.comboBox1.SelectedItem+"'", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
+                
                 if (dr.Read())
                 {
                     f1.bunifuMaterialTextbox16.Text = dr["sname"].ToString();
@@ -231,6 +234,7 @@ namespace CoachingManagementSystem
 
         public void searchCombo2()
         {
+            f1.comboBox2.Items.Clear();
             conn.Open();
             try
             {
@@ -238,7 +242,7 @@ namespace CoachingManagementSystem
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    f1.bunifuDropdown2.AddItem(dr["formNo"].ToString());
+                    f1.comboBox2.Items.Add(dr["formNo"].ToString());
                 }
 
             }
@@ -249,6 +253,37 @@ namespace CoachingManagementSystem
             conn.Close();
         }
 
+        public void searchcomboselected() {
+
+            conn.Open();
+            try
+            {
+                cmd = new SqlCommand("Select * from fee where formNo ='"+f1.comboBox2.SelectedItem+"'", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    f1.textBox1.Text = dr["Admission"].ToString();
+                    f1.textBox2.Text = dr["jan"].ToString();
+                    f1.textBox3.Text = dr["feb"].ToString();
+                    f1.textBox4.Text = dr["march"].ToString();
+                    f1.textBox5.Text = dr["april"].ToString();
+                    f1.textBox6.Text = dr["may"].ToString();
+                    f1.textBox7.Text = dr["jun"].ToString();
+                    f1.textBox8.Text = dr["july"].ToString();
+                    f1.textBox9.Text = dr["aug"].ToString();
+                    f1.textBox10.Text = dr["september"].ToString();
+                    f1.textBox11.Text = dr["oct"].ToString();
+                    f1.textBox12.Text = dr["nov"].ToString();
+                    f1.textBox13.Text = dr["dec"].ToString();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
 
         // this submit function is called when submit button is clicked on payment table
         public void submit()
@@ -256,9 +291,8 @@ namespace CoachingManagementSystem
             conn.Open();
             try
             {
-                if (flag == 1)
-                {
-                    cmd = new SqlCommand("update  fee SET Admission=@Admission,jan=@jan,feb=@feb,march=@march,april=@april,may=@may,jun=@jun,july=@july,aug=@aug,sept=@sept,oct=@oct,nov=@nov,dec=@dec where formNo='" + f1.bunifuDropdown2.selectedValue + "'", conn);
+                
+                    cmd = new SqlCommand("update  fee SET Admission=@Admission,jan=@jan,feb=@feb,march=@march,april=@april,may=@may,jun=@jun,july=@july,aug=@aug,september=@september,oct=@oct,nov=@nov,dec=@dec where formNo='" + f1.comboBox2.SelectedItem + "'", conn);
                     cmd.Parameters.AddWithValue("@Admission", f1.textBox1.Text);
                     cmd.Parameters.AddWithValue("@jan", f1.textBox2.Text);
                     cmd.Parameters.AddWithValue("@feb", f1.textBox3.Text);
@@ -268,12 +302,12 @@ namespace CoachingManagementSystem
                     cmd.Parameters.AddWithValue("@jun", f1.textBox7.Text);
                     cmd.Parameters.AddWithValue("@july", f1.textBox8.Text);
                     cmd.Parameters.AddWithValue("@aug", f1.textBox9.Text);
-                    cmd.Parameters.AddWithValue("@sept", f1.textBox10.Text);
+                    cmd.Parameters.AddWithValue("@september", f1.textBox10.Text);
                     cmd.Parameters.AddWithValue("@oct", f1.textBox11.Text);
                     cmd.Parameters.AddWithValue("@nov", f1.textBox12.Text);
                     cmd.Parameters.AddWithValue("@dec", f1.textBox13.Text);
                     cmd.ExecuteNonQuery();
-                }
+                
             }
             catch (Exception e)
             {

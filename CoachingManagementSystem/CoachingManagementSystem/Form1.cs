@@ -17,7 +17,7 @@ namespace CoachingManagementSystem
         supportingClass c;
 
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-6MEQU96;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
 
 
         //Constructor
@@ -294,14 +294,25 @@ namespace CoachingManagementSystem
 
 
         //Search
-        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+      private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            c.selectedCombo();
+               c.selectedCombo();
         }
-        //payment
+
+        //payment 
+
+        //selected Index
+     private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          c.searchcomboselected();
+      }
+       
+        //payment submit
         private void bunifuThinButton211_Click(object sender, EventArgs e)
         {
             c.submit();
+            MessageBox.Show("Data submitted");
+
         }
 
 //************************   BATCH WORK START   ***************************\\
@@ -420,6 +431,15 @@ namespace CoachingManagementSystem
             c.search();
         }
 
+        
+
+
+        
+
+        }
+
+        
+
 
 
      
@@ -432,4 +452,3 @@ namespace CoachingManagementSystem
         
      
     }
-}
