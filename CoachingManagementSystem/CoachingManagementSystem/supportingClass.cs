@@ -102,8 +102,7 @@ namespace CoachingManagementSystem
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT COUNT(formNO) FROM ADMSN", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
+                if (dr.Read()){
                     c = Convert.ToInt32(dr[0]);
                     c++;
                 }

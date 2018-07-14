@@ -17,7 +17,7 @@ namespace CoachingManagementSystem
         supportingClass c;
 
 
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;AttachDbFilename=|DataDirectory|COACHINGMANAGEMENTSYSTEM.mdf;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
 
 
         //Constructor
