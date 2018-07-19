@@ -15,9 +15,9 @@ namespace CoachingManagementSystem
 
         public String textBoxtext;
         supportingClass c;
+        batch b1;
 
-
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;AttachDbFilename=|DataDirectory|COACHINGMANAGEMENTSYSTEM.mdf;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE; AttachDbFilename=|DataDirectory|COACHINGMANAGEMENTSYSTEM.mdf;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
 
 
         //Constructor
@@ -30,7 +30,7 @@ namespace CoachingManagementSystem
         //Load
         private void Form1_Load(object sender, EventArgs e)
         {
-            c = new supportingClass(this);
+            c = new supportingClass(this,b1);
             this.bunifuGradientPanel4.Hide();
         }
 
@@ -47,6 +47,7 @@ namespace CoachingManagementSystem
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Show();
             this.bunifuGradientPanel6.Hide();
+            c.clearItem();
             c.searchCombo();
         }
 
@@ -54,6 +55,7 @@ namespace CoachingManagementSystem
         //Register Button
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
+            this.pictureBox2.Image = null;
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Hide();
             this.bunifuGradientPanel6.Hide();
@@ -64,6 +66,7 @@ namespace CoachingManagementSystem
         //PAyment
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
+            c.paymentItemClear();
             c.searchCombo2();
             this.bunifuGradientPanel4.Show();
             this.bunifuGradientPanel5.Show();
@@ -348,7 +351,7 @@ namespace CoachingManagementSystem
 
 
         //to add labels on click submit
-        static byte batchCount = 0;
+        public  byte batchCount = 0;
         public Label[] batchNames = new Label[100];
         public int labelX = 100, labelY = 200;
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
@@ -367,6 +370,14 @@ namespace CoachingManagementSystem
             batchCount++;
             c.creatTable();
 
+        }
+
+        //View Batch
+        private void bunifuThinButton216_Click(object sender, EventArgs e)
+        {
+            this.bunifuThinButton216.Hide();
+            this.bunifuThinButton24.Hide();
+            c.viewbatch();
         }
         //************************   BATCH WORK END   ***************************\\
         private void bunifuThinButton214_Click(object sender, EventArgs e)
@@ -395,6 +406,7 @@ namespace CoachingManagementSystem
             this.bunifuMetroTextbox5.Hide();
             this.bunifuThinButton217.Hide();
             this.bunifuThinButton219.Hide();
+            this.bunifuThinButton218.Hide();
             this.GirdView1.Show();
             c.courseDataView();
         }
@@ -430,6 +442,8 @@ namespace CoachingManagementSystem
         {
             c.search();
         }
+
+       
 
         
 

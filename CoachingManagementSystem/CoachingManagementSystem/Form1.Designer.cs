@@ -624,10 +624,10 @@
             this.bunifuGradientPanel8.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel8.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel8.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel8.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel8.Location = new System.Drawing.Point(0, 1);
             this.bunifuGradientPanel8.Name = "bunifuGradientPanel8";
             this.bunifuGradientPanel8.Quality = 10;
-            this.bunifuGradientPanel8.Size = new System.Drawing.Size(851, 554);
+            this.bunifuGradientPanel8.Size = new System.Drawing.Size(851, 553);
             this.bunifuGradientPanel8.TabIndex = 3;
             // 
             // CoursePanel
@@ -648,7 +648,7 @@
             this.CoursePanel.Location = new System.Drawing.Point(0, 0);
             this.CoursePanel.Name = "CoursePanel";
             this.CoursePanel.Quality = 10;
-            this.CoursePanel.Size = new System.Drawing.Size(849, 554);
+            this.CoursePanel.Size = new System.Drawing.Size(851, 554);
             this.CoursePanel.TabIndex = 6;
             // 
             // bunifuGradientPanel9
@@ -665,10 +665,10 @@
             this.bunifuGradientPanel9.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel9.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel9.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel9.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel9.Location = new System.Drawing.Point(0, -1);
             this.bunifuGradientPanel9.Name = "bunifuGradientPanel9";
             this.bunifuGradientPanel9.Quality = 10;
-            this.bunifuGradientPanel9.Size = new System.Drawing.Size(846, 554);
+            this.bunifuGradientPanel9.Size = new System.Drawing.Size(851, 555);
             this.bunifuGradientPanel9.TabIndex = 15;
             // 
             // button1
@@ -1066,7 +1066,7 @@
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Girdview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Girdview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Girdview.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.Girdview.BackgroundColor = System.Drawing.Color.White;
             this.Girdview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Girdview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1208,6 +1208,7 @@
             this.bunifuThinButton216.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton216.TabIndex = 5;
             this.bunifuThinButton216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton216.Click += new System.EventHandler(this.bunifuThinButton216_Click);
             // 
             // textBox13
             // 
@@ -1780,6 +1781,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(672, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(136, 141);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
@@ -2508,7 +2510,7 @@
             this.ClientSize = new System.Drawing.Size(1050, 652);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PACIFIC COACHING SYSTEM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();

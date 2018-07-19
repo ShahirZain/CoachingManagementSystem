@@ -16,16 +16,19 @@ namespace CoachingManagementSystem
      public   int Studentflag0;
         SqlCommand cmd;
         int flag = 1;
+        batch b1;
         Form1 f1;
         String phycheck="", chemcheck="", mathcheck="", cscheck="", phylabcheck="", chemlabcheck="", cslabcheck="", xicheck="", xiicheck="";
         String imgLoc = "";
         byte[] img = null;
+        String[] ss = new String[100];
 
                                                             // ******* Connection from SQL******\\
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE;Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-ES52MLE; AttachDbFilename=|DataDirectory|COACHINGMANAGEMENTSYSTEM.mdf; Initial Catalog=COACHINGMANAGEMENTSYSTEM;Integrated Security=True");
 
-        public supportingClass(Form1 ff) {
+        public supportingClass(Form1 ff,batch bb) {
             f1 = ff;
+            b1 = bb;
         }
 
                                      //<><><><><><><><><><><><><><><><Register Work START><><><><><><><><><><><><><><><><><><>\\
@@ -126,8 +129,10 @@ namespace CoachingManagementSystem
             conn.Open();
             try
             {
+
                 cmd  = new SqlCommand("insert into ADMSN(sname,fname,address,religion,mblNo,email,sex,DOB,phy,chem,math,CS,phylab,chemlab,CSlab,Xi,Xii,img,formNo) values(@sname,@fname,@address,@religion,@mblNo,@email,@sex,@DOB,@phy,@chem,@math,@CS,@phylab,@chemlab,@CSlab,@Xi,@Xii,@img,@formNo)", conn);
                 SqlCommand cmd1 = new SqlCommand("insert into fee(formNo) values(@formNo)", conn);
+                SqlCommand cmd2 = new SqlCommand("insert into batchcontrol(name,batchSelected,xi,xii) values(@name,@batchSelected,@xi,@xii) ", conn);
                 cmd.Parameters.AddWithValue("@sname", f1.bunifuMaterialTextbox1.Text);
                 cmd.Parameters.AddWithValue("@fname", f1.bunifuMaterialTextbox2.Text);
                 cmd.Parameters.AddWithValue("@address", f1.bunifuMaterialTextbox3.Text);
@@ -148,8 +153,13 @@ namespace CoachingManagementSystem
                 cmd.Parameters.AddWithValue("@img", img);
                 cmd.Parameters.AddWithValue("@formNo", Convert.ToInt32(f1.label11.Text));
                 cmd1.Parameters.AddWithValue("@formNo", Convert.ToInt32(f1.label11.Text));
+                cmd2.Parameters.AddWithValue("@name", f1.bunifuMaterialTextbox1.Text);
+                cmd2.Parameters.AddWithValue("@xi", xicheck);
+                cmd2.Parameters.AddWithValue("@xii", xiicheck);
+                cmd2.Parameters.AddWithValue("@batchSelected", "none");
                 cmd.ExecuteNonQuery();
                 cmd1.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
             }
             catch (Exception e) {
                 MessageBox.Show(e.ToString());
@@ -226,6 +236,30 @@ namespace CoachingManagementSystem
                 
             conn.Close();
         }
+
+        public void clearItem() { 
+        
+                    f1.bunifuMaterialTextbox16.Text = "";
+                    f1.bunifuMaterialTextbox15.Text = "";
+                    f1.bunifuMaterialTextbox14.Text = "";
+                    f1.bunifuMaterialTextbox13.Text = "";
+                    f1.bunifuMaterialTextbox12.Text = "";
+                    f1.bunifuMaterialTextbox11.Text = "";
+                    f1.bunifuMaterialTextbox10.Text = "";
+                    f1.bunifuCheckbox18.Checked = false;
+                    f1.bunifuCheckbox17.Checked = false;
+                    f1.bunifuCheckbox14.Checked = false;
+                    f1.bunifuCheckbox13.Checked = false;
+                    f1.bunifuCheckbox12.Checked = false;
+                    f1.bunifuCheckbox11.Checked = false;
+                    f1.bunifuCheckbox10.Checked = false;
+                    f1.bunifuCheckbox9.Checked = false;
+                    f1.bunifuCheckbox8.Checked = false;
+                    f1.pictureBox3.Image = null;
+                   // f1.comboBox1.Items.Clear();
+                    //f1.comboBox1 = null;
+        }
+
 
                              //<><><><><><><><><><><><><><><><><Search Work END><><><><><><><><><><><><><><><><><><>\\
 
@@ -315,6 +349,22 @@ namespace CoachingManagementSystem
             conn.Close();
         }
 
+        public void paymentItemClear() {
+
+            f1.textBox1.Text = "";
+            f1.textBox2.Text = "";
+            f1.textBox3.Text = "";
+            f1.textBox4.Text = "";
+            f1.textBox5.Text = "";
+            f1.textBox6.Text = "";
+            f1.textBox7.Text = "";
+            f1.textBox8.Text = "";
+            f1.textBox9.Text = "";
+            f1.textBox10.Text = "";
+            f1.textBox11.Text = "";
+            f1.textBox12.Text = "";
+            f1.textBox13.Text = "";
+        }
                            //<><><><><><><><><><><><><><><><><Payment Work END><><><><><><><><><><><><><><><><><><>\\
 
                           //<><><><><><><><><><><><><><><><><><BATCH Work START><><><><><><><><><><><><><><><><><><>\\
@@ -325,6 +375,48 @@ namespace CoachingManagementSystem
             {
                 cmd = new SqlCommand("CREATE TABLE "+f1.bunifuMetroTextbox1.Text.ToString()+"   (fname varchar(30), year varchar(30)) ", conn);
                 cmd.ExecuteNonQuery();
+                SqlCommand cmd1 = new SqlCommand("insert into control(controlName) values(@controlName) ", conn);
+                cmd1.Parameters.AddWithValue("@controlName", f1.bunifuMetroTextbox1.Text);
+                cmd1.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            conn.Close();
+        }
+
+        public void viewbatch() {
+           
+            byte batchCount = 0;
+            int count = 0;
+            Label[] batchNames = new Label[100];
+            int labelX = 200, labelY = 200;
+            conn.Open();
+            try
+            {
+                        //to add labels on click submit
+                cmd = new SqlCommand("Select * from control", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    ss[count] = dr["controlName"].ToString();
+                    batchNames[batchCount] = new Label();
+                    batchNames[batchCount].Name = "batchName" + batchCount;
+                    batchNames[batchCount].Location = new Point(labelX, labelY);
+                    batchNames[batchCount].Font = new Font("Microsoft Sans Serif normal", 12.75F);
+                    batchNames[batchCount].Text = dr["controlName"].ToString();
+                    f1.bunifuGradientPanel7.Controls.Add(batchNames[batchCount]);
+                    batchNames[batchCount].Click += (object s, EventArgs ev) =>
+                    {
+                      batch b = new batch();
+                      b.Show();
+                        
+                    };
+                    labelY += 20;
+                    batchCount++;
+                    count++;
+                }
             }
             catch (Exception e)
             {
@@ -354,7 +446,7 @@ namespace CoachingManagementSystem
         public void dataview() {
             try {
                 conn.Open();
-                cmd = new SqlCommand("select * from trainer",conn);
+                cmd = new SqlCommand("select subject as 'SUBJECT',tname as 'TRAINER NAME' from trainer",conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
@@ -400,7 +492,7 @@ namespace CoachingManagementSystem
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("select * from course", conn);
+                cmd = new SqlCommand("select subject as 'SUBJECT',course_level as 'LEVEL' from course", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
@@ -421,7 +513,7 @@ namespace CoachingManagementSystem
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("select sname,fname,mblNo from ADMSN where xi='yes'", conn);
+                cmd = new SqlCommand("select formNo as 'FORM NO.', sname as 'STUDENT NAME',fname as 'FATHER NAME',mblNo as 'MOBILE NO' from ADMSN where xi='yes'", conn);
                 SqlDataReader dr = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
@@ -491,5 +583,71 @@ namespace CoachingManagementSystem
             
 
                      //<><><><><><><><><><><><><><><><><><STUDENT Work END><><><><><><><><><><><><><><><><><><>\\
+
+                    //<><><><><><><><><><><><><><><><><><Batch Work Start><><><><><><><><><><><><><><><><><><>\\
+        public void batchShow()
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select fname as 'Name' , year as 'Academic Year' from batch_Name ", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                b1.dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e) {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public void addbatch() {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select name as 'Name' , xi as 'Academic Year' from batchControl ", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                b1.dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+
+
+
+        public void addBatchStudent()
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand("select name as 'Name' , xi as 'Academic Year' from batchControl ", conn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                conn.Close();
+                conn.Open();
+                for (int i = 0; i < b1.dataGridView1.Rows.Count ; i++)
+                {
+                    bool isCellChecked = Convert.ToBoolean(b1.dataGridView1.Rows[i].Cells[2].Value);
+                    if (isCellChecked == true)
+                    {
+                        MessageBox.Show("anc");
+
+                        cmd = new SqlCommand("insert into batch_Name(fname,year) values(@fname,@year)  ", conn);
+                        cmd.Parameters.AddWithValue("@fname", b1.dataGridView1.Rows[i].Cells[0].Value.ToString());
+                        cmd.Parameters.AddWithValue("@year", b1.dataGridView1.Rows[i].Cells[2].Value.ToString());
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
     }
 }
